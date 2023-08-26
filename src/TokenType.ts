@@ -1,5 +1,3 @@
-import Token from './Token';
-
 export enum ETokenType {
     Identifier = 'identifier',
     Literal = 'literal',

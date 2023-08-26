@@ -16,12 +16,11 @@ export default class Lexer {
             const token = this.findNextToken();
             console.log(token);
         }
-        console.log('tokens: ', this.tokens);
+        console.log(this.tokens);
         return this.tokens.filter(t => t.type !== tokenTypesList.space);
     }
 
     private findNextToken() {
-        console.log(tokenTypesList.literal.match(this.code));
         const subCode = this.code.slice(this.position);
         for (const tokenType of Object.values(tokenTypesList)) {
             const match = tokenType.match(subCode);
