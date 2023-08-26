@@ -1,3 +1,6 @@
-const str: string = "ТЕСТ";
+import Lexer from "./Lexer";
 
-console.log(str);
+const code: string = "  code  ";
+
+const lexer = new Lexer(code);
+lexer.analize();
